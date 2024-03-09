@@ -1,0 +1,16 @@
+.adjustmentDetails {
+  background-color: gainsboro;
+  table,
+  th,
+  td {
+    border: 1.5px solid black;
+    border-collapse: collapse;
+  }
+  table {
+    margin: 2% 0;
+    width: 100%;
+  }
+  td {
+    text-align: center;
+  }
+}

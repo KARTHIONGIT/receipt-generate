@@ -1,0 +1,24 @@
+.taxAndSummary {
+  table,
+  th,
+  td {
+    border: 1.5px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  table {
+    margin: 2% 0;
+    width: 100%;
+  }
+  td {
+    text-align: center;
+  }
+  td.amountCell, th.amountCell {
+    text-align: left;
+    padding-left: 10px;
+  }
+  th.amountCellHead{
+    text-align: right;
+    padding-right: 10px;
+  }
+}

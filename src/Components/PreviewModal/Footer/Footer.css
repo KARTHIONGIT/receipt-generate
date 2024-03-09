@@ -1,0 +1,8 @@
+.footer{
+    .brandDetails{
+        width: 100%;
+        background-color: rgb(198, 241, 249);
+        text-align: center;
+        padding: 5% 0;
+    }
+}

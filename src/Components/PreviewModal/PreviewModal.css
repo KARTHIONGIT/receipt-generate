@@ -1,0 +1,30 @@
+.previewModal {
+    overflow: scroll;
+    border: 1px solid grey;
+    background-color: rgb(255, 255, 255);
+    margin: 3% 5%;
+    max-width: 800px;
+    overflow-x: hidden;
+    /* right: 10%;
+    bottom: 10%;
+    left: 30%; */
+    z-index: 999;
+    transition: all 0.3s;
+    .closeModalButton{
+      position: absolute;
+      right: 0;
+      margin: 10px;
+    }  
+  }
+  .profileAndInvoice{
+    display: flex;
+    justify-content: space-around;
+    background-color: gainsboro;
+  }
+  .closeModalButton{
+    opacity: 1;
+  }
+  .closeModalButton:hover{
+    border: 1px solid rgb(255, 0, 191);
+    box-shadow: 30px 30px 30px rgba(255, 255, 255, 0);
+  }

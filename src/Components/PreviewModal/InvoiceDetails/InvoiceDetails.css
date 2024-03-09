@@ -1,0 +1,13 @@
+.invoiceDetails {
+  border: 1.5px solid black;
+  width: 40%;
+  min-height: 10%;
+
+  padding: 2% 5%;
+  table {
+    border-spacing: 5px;    
+    th {
+      width: 50%;
+    }
+  }
+}
