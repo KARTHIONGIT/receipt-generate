@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/receipt-generate/static/css/main.64086b32.css",
+    "main.js": "/receipt-generate/static/js/main.5c9807f2.js",
+    "index.html": "/receipt-generate/index.html",
+    "main.64086b32.css.map": "/receipt-generate/static/css/main.64086b32.css.map",
+    "main.5c9807f2.js.map": "/receipt-generate/static/js/main.5c9807f2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64086b32.css",
+    "static/js/main.5c9807f2.js"
+  ]
+}
