@@ -8,12 +8,23 @@
   max-width: 90%;
   max-height: 85vh;
   overflow-x: hidden;
-  transition: all .5s linear;
-  flex: 1;  
+  flex: 1;
+}
+.previewModal::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+.previewModal::-webkit-scrollbar {
+  width: 14px;
+  background-color: #f5f5f5;
+}
+.previewModal::-webkit-scrollbar-thumb {
+  border: 1px solid silver;
+}
+.previewModal::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(1, 165, 146, 0.33);
 }
 .profileAndInvoice {
   display: flex;
   justify-content: space-around;
   background-color: gainsboro;
 }
-

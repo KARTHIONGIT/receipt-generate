@@ -8,6 +8,7 @@
   border-radius: 20px;
   border-color: silver;
   box-shadow: 3px 3px 0 0 rgb(1, 165, 146);
+  transition: all 0.3s;
 }
 
 .printIcon:hover {

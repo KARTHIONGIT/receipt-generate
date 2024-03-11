@@ -14,11 +14,11 @@ const ReceiptContainer = () => {
   const [showFormPage, setShowFormPage] = useState(true);
   const [showPreviewModal, setShowPreviewModal] = useState(false);
   const [userName, setUserName] = useState("Karthikeyan K");
-  const [phoneNumber, setPhoneNumber] = useState("7358220927");
-  const [email, setEmail] = useState("karthikandhan17@gmail.com");
+  const [phoneNumber, setPhoneNumber] = useState("1231231231");
+  const [email, setEmail] = useState("karthikandhan7@gmail.com");
   const [addressLine1, setAddressLine1] = useState("19, Sriram nagar");
   const [addressLine2, setAddressLine2] = useState("Dubai main road");
-  const [addressLine3, setAddressLine3] = useState("Dubai 600006");
+  const [addressLine3, setAddressLine3] = useState("Chennai 600006");
   const [planDuration, setPlanDuration] = useState(planList[2].count);
   const [amountPerMonth, setAmountPerMonth] = useState(800);
   const [startingDate, setStartingDate] = useState(todaysDateString);
@@ -56,8 +56,10 @@ const ReceiptContainer = () => {
                   <label>RECEIPT TYPE</label>
                 </th>
                 <td>
-                  <select>
-                    <option>Internet Bill</option>
+                  <select className="receiptType">
+                    <option>
+                      <h3>Internet Bill</h3>
+                    </option>
                   </select>
                 </td>
               </tr>
@@ -108,7 +110,7 @@ const ReceiptContainer = () => {
                 </td>
               </tr>
               <tr>
-                <th rowSpan={3} style={{verticalAlign:"middle"}}>
+                <th rowSpan={3} style={{ verticalAlign: "middle" }}>
                   <label>ADDRESS</label>
                 </th>
                 <td>
@@ -122,7 +124,7 @@ const ReceiptContainer = () => {
                   />
                 </td>
               </tr>
-              <tr>                
+              <tr>
                 <td>
                   <input
                     type="text"
@@ -133,7 +135,7 @@ const ReceiptContainer = () => {
                   />
                 </td>
               </tr>
-              <tr>                
+              <tr>
                 <td>
                   <input
                     type="text"
@@ -195,12 +197,15 @@ const ReceiptContainer = () => {
                 </td>
               </tr>
             </table>
-            <br/>
-            <input type="submit" value="GENERATE RECEIPT" className="generateButton"/>
+            <br />
+            <input
+              type="submit"
+              value="GENERATE RECEIPT"
+              className="generateButton"
+            />
           </form>
         </div>
       )}
-
       {showPreviewModal && (
         <PreviewModal
           receiptData={stateValues}

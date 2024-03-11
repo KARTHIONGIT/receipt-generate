@@ -27,8 +27,15 @@
       font-weight: 600;
       font-style: italic;
       letter-spacing: 3px;
-      border-color: silver;
       box-shadow: 3px 3px 0 0 rgb(1, 165, 146);
+    }
+    .receiptType,
+    .generateButton {
+      border-color: silver;
+      transition: all 0.3s;
+    }
+    .receiptType {
+      box-shadow: 2px 2px 0 0 rgb(1, 165, 146);
     }
     input,
     select {
@@ -48,18 +55,13 @@
       margin-right: 0.6em;
       min-width: 15em;
     }
-    input::placeholder,
-    textarea::placeholder {
-      color: lightgray;
-    }
     input:hover:not(:disabled):not(:focus),
-    select:hover:not(:disabled):not(:focus) {
+    select:hover:not(:disabled):not(:focus),
+    .generateButton:hover {
       border-color: silver;
       box-shadow: 1px 1px 0 0 rgb(1, 165, 146);
     }
     input:focus,
-    .input:focus,
-    textarea:focus,
     select:focus {
       border-color: rgb(92, 91, 91);
       box-shadow: 2px 2px 0 0 rgb(1, 165, 146);
@@ -69,4 +71,3 @@
     }
   }
 }
-
