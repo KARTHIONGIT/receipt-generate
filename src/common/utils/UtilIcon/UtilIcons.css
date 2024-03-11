@@ -1,0 +1,22 @@
+.utilIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .fullscreenIcon,
+  .fullscreenIcon,
+  .closeIcon {
+    border-color: #c0c0c0;
+    box-shadow: 2px 2px 0 0 rgb(1, 165, 146);
+    border-radius: 8px;
+  }
+  .closeIcon {
+    padding: 3px;
+  }
+  .fullscreenIcon:hover,
+  .fullscreenIcon:hover,
+  .closeIcon:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    box-shadow: 1px 1px 0 0 rgb(1, 165, 146);
+  }
+}

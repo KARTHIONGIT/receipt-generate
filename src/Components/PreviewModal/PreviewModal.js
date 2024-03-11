@@ -4,21 +4,27 @@ import InvoiceDetails from "./InvoiceDetails/InvoiceDetails";
 import AdjustmentDetails from "./AdjustmentDetails/AdjustmentDetails";
 import TaxAndSummary from "./TaxAndSummary/TaxAndSummary";
 import TermsAndConditions from "./Footer/TermsAndConditions";
+import BrandDetails from "./Footer/BrandDetails";
+import Header from "./Header/Header";
+import { UtilIcons } from "../../common/utils/UtilIcon/UtilIcons";
+import { PdfExport } from "../../common/utils/PdfExport/PdfExport";
 
 import "./PreviewModal.css";
-import BrandDetails from "./Footer/BrandDetails";
 
 const PreviewModal = ({ receiptData, closeModal, fullScreenToggle }) => {
   return (
     <div className="previewModal">
-      {/* <div style={{ display: "flex"}}>
-        <span onClick={() => closeModal(!showPreviewModal)}>{closeIcon()}</span>
-        <span onClick={() => fullScreenToggle(!showFormPage)}>
-          <h1>[ ]</h1>
-        </span>
-      </div> */}
-
+      <div>
+        <UtilIcons
+          receiptData={receiptData}
+          closeModal={closeModal}
+          fullScreenToggle={fullScreenToggle}
+        />
+      </div>
       <div className="receipt-details">
+        <div className="receiptHeader">
+          <Header />
+        </div>
         <div className="profileAndInvoice">
           <UserDetails receiptData={receiptData} />
           <InvoiceDetails receiptData={receiptData} />
@@ -31,11 +37,12 @@ const PreviewModal = ({ receiptData, closeModal, fullScreenToggle }) => {
         <div className="taxAndSummary">
           <TaxAndSummary receiptData={receiptData} />
         </div>
-        <div className="footer">
+        <div className="receiptFooter">
           <TermsAndConditions />
           <BrandDetails />
         </div>
       </div>
+      <PdfExport targetClass="receipt-details" />
     </div>
   );
 };

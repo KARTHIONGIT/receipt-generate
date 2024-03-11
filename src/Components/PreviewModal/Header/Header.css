@@ -1,0 +1,11 @@
+.receiptHeader {
+  display: flex;
+  .brandLogoContainer {
+    width: 35%;
+  }
+  .brandName {
+    padding: 3% 0 0 5%;
+    width: 30%;
+    justify-content: center;
+  }
+}

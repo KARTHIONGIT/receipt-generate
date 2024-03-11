@@ -1,13 +1,72 @@
-form {
-  margin: 5% 10%;
-}
-input {
-  margin-top: 30px;
-}
 .container {
   display: flex;
   justify-content: space-around;
+  .formPage {
+    width: 35%;
+    form {
+      margin: 3% 5%;
+    }
+    table {
+      tr {
+        th {
+          text-align: right;
+          vertical-align: bottom;
+          width: 20%;
+          padding: 2%;
+          font-weight: 500;
+          color: rgb(66, 66, 66);
+        }
+        td {
+          width: 30%;
+        }
+      }
+    }
+    .generateButton {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 3px;
+      border-color: silver;
+      box-shadow: 3px 3px 0 0 rgb(1, 165, 146);
+    }
+    input,
+    select {
+      width: 100%;
+      text-align: left;
+      background-color: white;
+      color: inherit;
+      outline: none;
+      resize: none;
+      box-sizing: border-box;
+      border: 1px solid lightgray;
+      box-shadow: none;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      padding: 0.6em;
+      margin-right: 0.6em;
+      min-width: 15em;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: lightgray;
+    }
+    input:hover:not(:disabled):not(:focus),
+    select:hover:not(:disabled):not(:focus) {
+      border-color: silver;
+      box-shadow: 1px 1px 0 0 rgb(1, 165, 146);
+    }
+    input:focus,
+    .input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: rgb(92, 91, 91);
+      box-shadow: 2px 2px 0 0 rgb(1, 165, 146);
+    }
+    .generateButton:hover {
+      color: rgb(1, 165, 146);
+    }
+  }
 }
-.previewModal {
-  flex: 1;
-}
+
