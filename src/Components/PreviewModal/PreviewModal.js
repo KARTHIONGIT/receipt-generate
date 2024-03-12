@@ -11,13 +11,13 @@ import { PdfExport } from "../../common/utils/PdfExport/PdfExport";
 
 import "./PreviewModal.css";
 
-const PreviewModal = ({ receiptData, closeModal, fullScreenToggle }) => {
+const PreviewModal = ({ receiptData, showModal, fullScreenToggle }) => {
   return (
     <div className="previewModal">
       <div>
         <UtilIcons
           receiptData={receiptData}
-          closeModal={closeModal}
+          showModal={showModal}
           fullScreenToggle={fullScreenToggle}
         />
       </div>

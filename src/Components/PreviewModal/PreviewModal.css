@@ -6,19 +6,19 @@
   padding: 1%;
   margin: 1% 5%;
   max-width: 90%;
-  max-height: 85vh;
+  max-height: 83vh;
   overflow-x: hidden;
   flex: 1;
 }
 .previewModal::-webkit-scrollbar-track {
-  background-color: #f5f5f5;
+  background-color: #cfcdcd;
 }
 .previewModal::-webkit-scrollbar {
   width: 14px;
-  background-color: #f5f5f5;
+  background-color: #dbdbdb;
 }
 .previewModal::-webkit-scrollbar-thumb {
-  border: 1px solid silver;
+  background-color:darkgray
 }
 .previewModal::-webkit-scrollbar-thumb:hover {
   background-color: rgba(1, 165, 146, 0.33);

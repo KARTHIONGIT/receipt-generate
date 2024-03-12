@@ -5,7 +5,7 @@ import fullScreenOff from "../../graphics/exit-full-screen.png";
 import "./UtilIcons.css";
 import { PdfExport } from "../PdfExport/PdfExport";
 
-export const UtilIcons = ({ receiptData, closeModal, fullScreenToggle }) => {
+export const UtilIcons = ({ receiptData, showModal, fullScreenToggle }) => {
   const { showPreviewModal, showFormPage } = receiptData;
   return (
     <div className="utilIcon">
@@ -23,7 +23,7 @@ export const UtilIcons = ({ receiptData, closeModal, fullScreenToggle }) => {
         <span
           onClick={() => {
             fullScreenToggle(true);
-            closeModal(!showPreviewModal);
+            showModal(!showPreviewModal);
           }}
           style={{ position: "sticky" }}
         >
