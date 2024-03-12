@@ -11,23 +11,33 @@ const ReceiptContainer = () => {
   const stateValues = { showFormPage, showPreviewModal, ...receiptData };
 
   return (
-    <div className="container">
-      {showFormPage && (
-        <Form
-          receiptData={stateValues}
-          setReceiptData={(receiptData) => setReceiptData(receiptData)}
-          showModal={(showPreview) => setShowPreviewModal(showPreview)}
-        />
-      )}
-      {console.log("Code is in contianer")}
-      {showPreviewModal && (
-        <PreviewModal
-          receiptData={stateValues}
-          showModal={(showPreview) => setShowPreviewModal(showPreview)}
-          fullScreenToggle={(showForm) => setShowFormPage(showForm)}
-        />
-      )}
-    </div>
+    <>
+      <div className="container">
+        {showFormPage && (
+          <Form
+            receiptData={stateValues}
+            setReceiptData={(receiptData) => setReceiptData(receiptData)}
+            showModal={(showPreview) => setShowPreviewModal(showPreview)}
+          />
+        )}
+        {showPreviewModal && (
+          <PreviewModal
+            receiptData={stateValues}
+            showModal={(showPreview) => setShowPreviewModal(showPreview)}
+            fullScreenToggle={(showForm) => setShowFormPage(showForm)}
+          />
+        )}
+      </div>
+      <span>
+      &nbsp;Find my code&nbsp;
+        <a
+          target="blank"
+          href="https://github.com/KARTHIONGIT/receipt-generate/tree/master/src/"
+        >
+          here&#129505;
+        </a>
+      </span>
+    </>
   );
 };
 
