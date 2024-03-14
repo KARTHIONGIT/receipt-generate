@@ -20,7 +20,7 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
   const [addressLine1, setAddressLine1] = useState("19, Sriram nagar");
   const [addressLine2, setAddressLine2] = useState("Dubai main road");
   const [addressLine3, setAddressLine3] = useState("Chennai 600006");
-  const [planDuration, setPlanDuration] = useState(planList[2].count);
+  const [planDuration, setPlanDuration] = useState(planList[0].count);
   const [amountPerMonth, setAmountPerMonth] = useState(800);
   const [startingDate, setStartingDate] = useState(todaysDateString);
 
