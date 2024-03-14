@@ -1,6 +1,6 @@
 .invoiceDetails {
   border: 1.5px solid black;
-  width: 40%;
+  width: 48%;
   min-height: 10%;
 
   padding: 2% 5%;
@@ -8,6 +8,7 @@
     border-spacing: 5px;    
     th {
       width: 50%;
+      text-align: left;
     }
   }
 }

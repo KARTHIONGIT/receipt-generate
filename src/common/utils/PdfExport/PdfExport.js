@@ -55,8 +55,8 @@ export const PdfExport = ({ targetClass }) => {
         alt="save as pdf"
         className="printIcon"
         src={printIcon}
-        width={40}
-        height={40}
+        width={50}
+        height={50}
         onClick={handlePrint}
       />
     </>

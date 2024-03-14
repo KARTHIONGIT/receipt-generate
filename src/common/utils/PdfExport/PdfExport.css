@@ -2,19 +2,18 @@
   position: absolute;
   bottom: 52px;
   right: 85px;
+  padding: 5px;
   border: 1px solid silver;
-  padding: 8px;
-  background-color: white;
+  background-color:rgb(241, 253, 255);
   border-radius: 20px;
-  border-color: silver;
-  box-shadow: 3px 3px 0 0 rgb(1, 165, 146);
+  box-shadow: 1px 1px 0 0 rgb(1, 165, 146);
   transition: all 0.3s;
 }
 
 .printIcon:hover {
   cursor: pointer;
-  background-color: lightgray;
-  box-shadow: 1px 1px 0 0 rgb(1, 165, 146);
+  background-color:rgb(219, 245, 249);
+  box-shadow: 3px 3px 0 0 rgb(1, 165, 146);
 }
 
 @media screen {
