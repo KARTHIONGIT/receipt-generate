@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import "./ReceiptContainer.css";
 import PreviewModal from "../Components/PreviewModal/PreviewModal";
 import Form from "../Components/Form/Form";
@@ -29,7 +29,7 @@ const ReceiptContainer = () => {
         )}
       </div>
       <span>
-      &nbsp;Find my code&nbsp;
+        &nbsp;Find my code&nbsp;
         <a
           target="blank"
           href="https://github.com/KARTHIONGIT/receipt-generate/tree/master/src/"

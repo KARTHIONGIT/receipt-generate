@@ -52,6 +52,7 @@ export const PdfExport = ({ targetClass }) => {
   return (
     <>
       <img
+        alt="save as pdf"
         className="printIcon"
         src={printIcon}
         width={40}

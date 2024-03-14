@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <>
       <div className="brandLogoContainer">
-        <img src={brandLogo} width={120} height={120} />
+        <img alt="brand logo" src={brandLogo} width={120} height={120} />
       </div>
       <div className="brandName">
         <h2>BHARATHI CABLES</h2>

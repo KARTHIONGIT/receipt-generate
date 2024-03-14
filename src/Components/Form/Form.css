@@ -1,7 +1,8 @@
 .formPage {
   width: 35%;
+  height: 100%;
   form {
-    margin: 3% 5%;
+    margin: 5% 5%;
   }
   table {
     tr {
