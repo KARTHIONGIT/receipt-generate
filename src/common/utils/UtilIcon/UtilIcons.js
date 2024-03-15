@@ -11,8 +11,9 @@ export const UtilIcons = ({ receiptData, showModal, fullScreenToggle }) => {
       <div className="fullscreenIconContainer">
         <span onClick={() => fullScreenToggle(!showFormPage)}>
           <img
-            alt="Fullscreen"
             className="fullscreenIcon"
+            alt="Fullscreen"
+            title={showFormPage ? "enter fullscreen" : "exit fullscreen"}
             src={showFormPage ? fullScreenOn : fullScreenOff}
             width={30}
             height={30}
@@ -27,7 +28,14 @@ export const UtilIcons = ({ receiptData, showModal, fullScreenToggle }) => {
           }}
           style={{ position: "sticky" }}
         >
-          <img alt="close" className="closeIcon" src={closeIcon} width={23} height={23} />
+          <img
+            className="closeIcon"
+            alt="close"
+            title="close"
+            src={closeIcon}
+            width={23}
+            height={23}
+          />
         </span>
       </div>
     </div>

@@ -5,7 +5,6 @@ import "./Form.css";
 
 const Form = ({ receiptData, setReceiptData, showModal }) => {
   const { showPreviewModal } = receiptData;
-  console.log(receiptData);
   const planList = [
     { count: 1, text: "1 month" },
     { count: 3, text: "3 months" },
@@ -163,7 +162,7 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
                 }}
               >
                 {planList.map((value) => (
-                  <option>{value.text}</option>
+                  <option key={value.text}>{value.text}</option>
                 ))}
               </select>
             </td>
