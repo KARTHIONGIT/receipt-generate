@@ -3,16 +3,9 @@ import { getTodaysDateString } from "../../common/utils/mathOperations.util";
 
 import "./Form.css";
 
-const Form = ({ receiptData, setReceiptData, showModal }) => {
-  const { showPreviewModal } = receiptData;
-  const planList = [
-    { count: 1, text: "1 month" },
-    { count: 3, text: "3 months" },
-    { count: 6, text: "6 months" },
-    { count: 12, text: "12 months" },
-  ];
-  const todaysDateString = new Date().toDateString().slice(4);
+const getTodaysDateStringWithYear = getTodaysDateString("year");
 
+const Form = ({ receiptData, setReceiptData, showModal }) => {
   const [stateValues, setStateValues] = useState({
     userName: "Karthikeyan K",
     phoneNumber: "1234567890",
@@ -20,14 +13,14 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
     addressLine1: "19, Sriram nagar",
     addressLine2: "Dubai main road",
     addressLine3: "Chennai 600006",
-    planDuration: planList[0].count,
+    planDuration: 1,
     amountPerMonth: 800,
-    startingDate: todaysDateString,
+    startingDate: new Date().toDateString().slice(4),
   });
 
   const handleChange = (e) => {
-    setStateValues(prev => ({...prev, [e.target.name]:e.target.value}))
-  }
+    setStateValues((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
   useEffect(() => {
     setReceiptData(stateValues);
@@ -38,6 +31,7 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
     setReceiptData(stateValues);
     e.preventDefault();
   }
+  const { showPreviewModal } = receiptData;
 
   return (
     <div className="formPage">
@@ -147,17 +141,11 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
               <label>PLAN DURATION</label>
             </th>
             <td>
-              <select
-                onChange={(e) => {
-                  const duration = planList.find(
-                    (val) => val.text === e.target.value
-                  ).count;
-                  setStateValues(prev => ({...prev, planDuration:duration}));
-                }}
-              >
-                {planList.map((value) => (
-                  <option key={value.text}>{value.text}</option>
-                ))}
+              <select name="planDuration" onChange={handleChange}>
+                <option value={1}>1 month</option>
+                <option value={3}>3 months</option>
+                <option value={6}>6 months</option>
+                <option value={12}>12 months</option>
               </select>
             </td>
           </tr>
@@ -188,7 +176,7 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
                 onChange={handleChange}
                 name="startingDate"
                 required
-                defaultValue={getTodaysDateString("year")}
+                defaultValue={getTodaysDateStringWithYear}
               />
             </td>
           </tr>
