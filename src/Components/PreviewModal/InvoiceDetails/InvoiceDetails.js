@@ -1,8 +1,14 @@
-import { getInternetPlanSpeed, getUniqueInteger } from "../../../common/utils/mathOperations.util";
+import {
+  getInternetPlanSpeed,
+  getUniqueInteger,
+} from "../../../common/utils/mathOperations.util";
 import "./InvoiceDetails.css";
 
+const uniqueInteger = getUniqueInteger();
+
 const InvoiceDetails = ({ receiptData }) => {
-  const { phoneNumber, planDuration, startingDate, amountPerMonth } = receiptData;
+  const { phoneNumber, planDuration, startingDate, amountPerMonth } =
+    receiptData;
   const selectedDate = new Date(startingDate);
   const internetSpeed = getInternetPlanSpeed(amountPerMonth);
   const getDueDate = () => {
@@ -20,13 +26,12 @@ const InvoiceDetails = ({ receiptData }) => {
     return selectedDate.toDateString().slice(4);
   };
 
-  
   return (
     <div className="invoiceDetails">
       <table>
         <tr>
           <th width="50%">Invoice Number</th>
-          <td>{getUniqueInteger()}</td>
+          <td>{uniqueInteger}</td>
         </tr>
         <tr>
           <th>Invoice Date</th>
@@ -46,7 +51,9 @@ const InvoiceDetails = ({ receiptData }) => {
         </tr>
         <tr>
           <th>Plan Name</th>
-          <td>{internetSpeed}Mbps_UNL_CHN_{planDuration}_Mon</td>
+          <td>
+            {internetSpeed}Mbps_UNL_CHN_{planDuration}_Mon
+          </td>
         </tr>
         <tr>
           <th>Customer Type</th>

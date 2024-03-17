@@ -41,145 +41,145 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
         }}
       >
         <table>
-          <tr>
-            <th>
-              <label>RECEIPT TYPE</label>
-            </th>
-            <td>
-              <select className="receiptType">
-                <option>
-                  <h3>Internet Bill</h3>
-                </option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <label>NAME</label>
-            </th>
-            <td>
-              <input
-                type="text"
-                onChange={handleChange}
-                value={stateValues.userName}
-                name="userName"
-                maxLength={30}
-                required
-              />
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <label>PHONE</label>
-            </th>
-            <td>
-              <input
-                type="text"
-                onChange={handleChange}
-                value={stateValues.phoneNumber}
-                name="phoneNumber"
-                maxLength={10}
-                pattern="[1-9]{1}[0-9]{9}"
-                required
-              />
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <label>EMAIL</label>
-            </th>
-            <td>
-              <input
-                type="email"
-                required
-                onChange={handleChange}
-                value={stateValues.email}
-                name="email"
-                maxLength={30}
-              />
-            </td>
-          </tr>
-          <tr>
-            <th rowSpan={3} style={{ verticalAlign: "middle" }}>
-              <label>ADDRESS</label>
-            </th>
-            <td>
-              <input
-                type="text"
-                onChange={handleChange}
-                value={stateValues.addressLine1}
-                name="addressLine1"
-                maxLength={30}
-                required
-              />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input
-                type="text"
-                onChange={handleChange}
-                value={stateValues.addressLine2}
-                name="addressLine2"
-                maxLength={30}
-              />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input
-                type="text"
-                onChange={handleChange}
-                value={stateValues.addressLine3}
-                name="addressLine3"
-                maxLength={30}
-              />
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <label>PLAN DURATION</label>
-            </th>
-            <td>
-              <select name="planDuration" onChange={handleChange}>
-                <option value={1}>1 month</option>
-                <option value={3}>3 months</option>
-                <option value={6}>6 months</option>
-                <option value={12}>12 months</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <label>AMOUNT PER MONTH</label>
-            </th>
-            <td>
-              <input
-                type="number"
-                onChange={handleChange}
-                value={stateValues.amountPerMonth}
-                name="amountPerMonth"
-                min="400.00"
-                max="5000.00"
-                step="0.01"
-                required
-              />
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <label>STARTING DATE</label>
-            </th>
-            <td>
-              <input
-                type="date"
-                onChange={handleChange}
-                name="startingDate"
-                required
-                defaultValue={getTodaysDateStringWithYear}
-              />
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>
+                <label>RECEIPT TYPE</label>
+              </th>
+              <td>
+                <select className="receiptType">
+                  <option>Internet Bill</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label>NAME</label>
+              </th>
+              <td>
+                <input
+                  type="text"
+                  onChange={handleChange}
+                  value={stateValues.userName}
+                  name="userName"
+                  maxLength={30}
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label>PHONE</label>
+              </th>
+              <td>
+                <input
+                  type="text"
+                  onChange={handleChange}
+                  value={stateValues.phoneNumber}
+                  name="phoneNumber"
+                  maxLength={10}
+                  pattern="[1-9]{1}[0-9]{9}"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label>EMAIL</label>
+              </th>
+              <td>
+                <input
+                  type="email"
+                  required
+                  onChange={handleChange}
+                  value={stateValues.email}
+                  name="email"
+                  maxLength={30}
+                />
+              </td>
+            </tr>
+            <tr>
+              <th rowSpan={3} style={{ verticalAlign: "middle" }}>
+                <label>ADDRESS</label>
+              </th>
+              <td>
+                <input
+                  type="text"
+                  onChange={handleChange}
+                  value={stateValues.addressLine1}
+                  name="addressLine1"
+                  maxLength={30}
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  onChange={handleChange}
+                  value={stateValues.addressLine2}
+                  name="addressLine2"
+                  maxLength={30}
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  onChange={handleChange}
+                  value={stateValues.addressLine3}
+                  name="addressLine3"
+                  maxLength={30}
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label>PLAN DURATION</label>
+              </th>
+              <td>
+                <select name="planDuration" onChange={handleChange}>
+                  <option value={1}>1 month</option>
+                  <option value={3}>3 months</option>
+                  <option value={6}>6 months</option>
+                  <option value={12}>12 months</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label>AMOUNT PER MONTH</label>
+              </th>
+              <td>
+                <input
+                  type="number"
+                  onChange={handleChange}
+                  value={stateValues.amountPerMonth}
+                  name="amountPerMonth"
+                  min="400.00"
+                  max="5000.00"
+                  step="0.01"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label>STARTING DATE</label>
+              </th>
+              <td>
+                <input
+                  type="date"
+                  onChange={handleChange}
+                  name="startingDate"
+                  required
+                  defaultValue={getTodaysDateStringWithYear}
+                />
+              </td>
+            </tr>
+          </tbody>
         </table>
         <br />
         <input

@@ -37,31 +37,31 @@ const TaxAndSummary = ({ receiptData }) => {
           <td className="amountCell">Rs. {amountBeforeTax}</td>
         </tr>
         <tr>
-          <th className="amountCellHead" colspan="3">
+          <th className="amountCellHead" colSpan="3">
             CGST 9.00%
           </th>
           <td className="amountCell">Rs. {gstAmount}</td>
         </tr>
         <tr>
-          <th className="amountCellHead" colspan="3">
+          <th className="amountCellHead" colSpan="3">
             SGST 9.00%
           </th>
           <td className="amountCell">Rs. {gstAmount}</td>
         </tr>
         <tr>
-          <th className="amountCellHead" colspan="3">
+          <th className="amountCellHead" colSpan="3">
             Sub Total
           </th>
           <td className="amountCell">Rs. {finalAmount}</td>
         </tr>
         <tr>
-          <th className="amountCellHead" colspan="3">
+          <th className="amountCellHead" colSpan="3">
             Rounded Off
           </th>
           <td className="amountCell">Rs. -{roundOffAmount}</td>
         </tr>
         <tr>
-          <th className="amountCellHead" colspan="3">
+          <th className="amountCellHead" colSpan="3">
             Grand Total
           </th>
           <th className="amountCell">
