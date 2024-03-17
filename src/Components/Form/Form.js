@@ -13,27 +13,21 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
   ];
   const todaysDateString = new Date().toDateString().slice(4);
 
-  const [userName, setUserName] = useState("Karthikeyan K");
-  const [phoneNumber, setPhoneNumber] = useState("1231231231");
-  const [email, setEmail] = useState("karthikandhan7@gmail.com");
-  const [addressLine1, setAddressLine1] = useState("19, Sriram nagar");
-  const [addressLine2, setAddressLine2] = useState("Dubai main road");
-  const [addressLine3, setAddressLine3] = useState("Chennai 600006");
-  const [planDuration, setPlanDuration] = useState(planList[0].count);
-  const [amountPerMonth, setAmountPerMonth] = useState(800);
-  const [startingDate, setStartingDate] = useState(todaysDateString);
+  const [stateValues, setStateValues] = useState({
+    userName: "Karthikeyan K",
+    phoneNumber: "1234567890",
+    email: "karthikandhan7@gmail.com",
+    addressLine1: "19, Sriram nagar",
+    addressLine2: "Dubai main road",
+    addressLine3: "Chennai 600006",
+    planDuration: planList[0].count,
+    amountPerMonth: 800,
+    startingDate: todaysDateString,
+  });
 
-  const stateValues = {
-    userName,
-    phoneNumber,
-    email,
-    addressLine1,
-    addressLine2,
-    addressLine3,
-    planDuration,
-    amountPerMonth,
-    startingDate,
-  };
+  const handleChange = (e) => {
+    setStateValues(prev => ({...prev, [e.target.name]:e.target.value}))
+  }
 
   useEffect(() => {
     setReceiptData(stateValues);
@@ -72,8 +66,8 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
             <td>
               <input
                 type="text"
-                onChange={(e) => setUserName(e.target.value)}
-                value={userName}
+                onChange={handleChange}
+                value={stateValues.userName}
                 name="userName"
                 maxLength={30}
                 required
@@ -87,8 +81,8 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
             <td>
               <input
                 type="text"
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                value={phoneNumber}
+                onChange={handleChange}
+                value={stateValues.phoneNumber}
                 name="phoneNumber"
                 maxLength={10}
                 pattern="[1-9]{1}[0-9]{9}"
@@ -104,8 +98,8 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
               <input
                 type="email"
                 required
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
+                onChange={handleChange}
+                value={stateValues.email}
                 name="email"
                 maxLength={30}
               />
@@ -118,8 +112,8 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
             <td>
               <input
                 type="text"
-                onChange={(e) => setAddressLine1(e.target.value)}
-                value={addressLine1}
+                onChange={handleChange}
+                value={stateValues.addressLine1}
                 name="addressLine1"
                 maxLength={30}
                 required
@@ -130,8 +124,8 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
             <td>
               <input
                 type="text"
-                onChange={(e) => setAddressLine2(e.target.value)}
-                value={addressLine2}
+                onChange={handleChange}
+                value={stateValues.addressLine2}
                 name="addressLine2"
                 maxLength={30}
               />
@@ -141,8 +135,8 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
             <td>
               <input
                 type="text"
-                onChange={(e) => setAddressLine3(e.target.value)}
-                value={addressLine3}
+                onChange={handleChange}
+                value={stateValues.addressLine3}
                 name="addressLine3"
                 maxLength={30}
               />
@@ -158,7 +152,7 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
                   const duration = planList.find(
                     (val) => val.text === e.target.value
                   ).count;
-                  setPlanDuration(duration);
+                  setStateValues(prev => ({...prev, planDuration:duration}));
                 }}
               >
                 {planList.map((value) => (
@@ -174,8 +168,8 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
             <td>
               <input
                 type="number"
-                onChange={(e) => setAmountPerMonth(e.target.value)}
-                value={amountPerMonth}
+                onChange={handleChange}
+                value={stateValues.amountPerMonth}
                 name="amountPerMonth"
                 min="400.00"
                 max="5000.00"
@@ -191,7 +185,7 @@ const Form = ({ receiptData, setReceiptData, showModal }) => {
             <td>
               <input
                 type="date"
-                onChange={(e) => setStartingDate(e.target.value)}
+                onChange={handleChange}
                 name="startingDate"
                 required
                 defaultValue={getTodaysDateString("year")}
