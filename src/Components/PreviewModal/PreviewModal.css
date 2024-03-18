@@ -10,6 +10,7 @@
   overflow-x: hidden;
   flex: 1;
   font-size: 0.8rem;
+  animation: fadeIn ease 2s, slideaway 400ms ease-in;
 }
 .previewModal::-webkit-scrollbar-track {
   background-color: #cfcdcd;
@@ -28,4 +29,22 @@
   display: flex;
   justify-content: space-around;
   background-color: gainsboro;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideaway {
+  from {
+    transform: translateX(80px);
+    overflow: hidden;
+  }
+  to {
+    transform: translateX(0);
+  }
 }

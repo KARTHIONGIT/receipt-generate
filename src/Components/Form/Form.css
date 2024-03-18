@@ -2,6 +2,7 @@
   width: 35%;
   margin: auto;
   padding-left: 2%;
+  animation: fadeIn ease 1.2s;
   table {
     tr {
       th {
@@ -65,4 +66,16 @@
   .generateButton:hover {
     color: rgb(1, 165, 146);
   }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideaway {
+  from { transform: translateX(100px);}
+  to { transform: translateX(0);}
 }

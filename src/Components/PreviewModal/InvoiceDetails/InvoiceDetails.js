@@ -29,36 +29,38 @@ const InvoiceDetails = ({ receiptData }) => {
   return (
     <div className="invoiceDetails">
       <table>
-        <tr>
-          <th width="50%">Invoice Number</th>
-          <td>{uniqueInteger}</td>
-        </tr>
-        <tr>
-          <th>Invoice Date</th>
-          <td>{getInvoiceDate()}</td>
-        </tr>
-        <tr>
-          <th>Due Date</th>
-          <td>{getDueDate()}</td>
-        </tr>
-        <tr>
-          <th>Billing Period</th>
-          <td>{getInvoiceDate() + " to " + getEndDate()}</td>
-        </tr>
-        <tr>
-          <th>Customer ID</th>
-          <td>{phoneNumber?.slice(5) + phoneNumber?.slice(0, 5)}</td>
-        </tr>
-        <tr>
-          <th>Plan Name</th>
-          <td>
-            {internetSpeed}Mbps_UNL_CHN_{planDuration}_Mon
-          </td>
-        </tr>
-        <tr>
-          <th>Customer Type</th>
-          <td>Home</td>
-        </tr>
+        <tbody>
+          <tr>
+            <th width="50%">Invoice Number</th>
+            <td>{uniqueInteger}</td>
+          </tr>
+          <tr>
+            <th>Invoice Date</th>
+            <td>{getInvoiceDate()}</td>
+          </tr>
+          <tr>
+            <th>Due Date</th>
+            <td>{getDueDate()}</td>
+          </tr>
+          <tr>
+            <th>Billing Period</th>
+            <td>{getInvoiceDate() + " to " + getEndDate()}</td>
+          </tr>
+          <tr>
+            <th>Customer ID</th>
+            <td>{phoneNumber?.slice(5) + phoneNumber?.slice(0, 5)}</td>
+          </tr>
+          <tr>
+            <th>Plan Name</th>
+            <td>
+              {internetSpeed}Mbps_UNL_CHN_{planDuration}_Mon
+            </td>
+          </tr>
+          <tr>
+            <th>Customer Type</th>
+            <td>Home</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   );

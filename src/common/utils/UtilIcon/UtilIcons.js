@@ -26,10 +26,9 @@ export const UtilIcons = ({ receiptData, showModal, fullScreenToggle }) => {
             fullScreenToggle(true);
             showModal(!showPreviewModal);
           }}
-          style={{ position: "sticky" }}
         >
           <img
-            className="closeIcon"
+            className="closeModalIcon"
             alt="close"
             title="close"
             src={closeIcon}

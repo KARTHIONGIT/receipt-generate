@@ -24,50 +24,52 @@ const TaxAndSummary = ({ receiptData }) => {
   return (
     <div>
       <table>
-        <tr>
-          <th>S.No.</th>
-          <th>Particular</th>
-          <th>HSN/SAC</th>
-          <th>Amount</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>{planName}</td>
-          <td>N/A</td>
-          <td className="amountCell">Rs. {amountBeforeTax}</td>
-        </tr>
-        <tr>
-          <th className="amountCellHead" colSpan="3">
-            CGST 9.00%
-          </th>
-          <td className="amountCell">Rs. {gstAmount}</td>
-        </tr>
-        <tr>
-          <th className="amountCellHead" colSpan="3">
-            SGST 9.00%
-          </th>
-          <td className="amountCell">Rs. {gstAmount}</td>
-        </tr>
-        <tr>
-          <th className="amountCellHead" colSpan="3">
-            Sub Total
-          </th>
-          <td className="amountCell">Rs. {finalAmount}</td>
-        </tr>
-        <tr>
-          <th className="amountCellHead" colSpan="3">
-            Rounded Off
-          </th>
-          <td className="amountCell">Rs. -{roundOffAmount}</td>
-        </tr>
-        <tr>
-          <th className="amountCellHead" colSpan="3">
-            Grand Total
-          </th>
-          <th className="amountCell">
-            Rs. {getAmountWithZeroPaisa(finalAmount)}
-          </th>
-        </tr>
+        <tbody>
+          <tr>
+            <th>S.No.</th>
+            <th>Particular</th>
+            <th>HSN/SAC</th>
+            <th>Amount</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>{planName}</td>
+            <td>N/A</td>
+            <td className="amountCell">Rs. {amountBeforeTax}</td>
+          </tr>
+          <tr>
+            <th className="amountCellHead" colSpan="3">
+              CGST 9.00%
+            </th>
+            <td className="amountCell">Rs. {gstAmount}</td>
+          </tr>
+          <tr>
+            <th className="amountCellHead" colSpan="3">
+              SGST 9.00%
+            </th>
+            <td className="amountCell">Rs. {gstAmount}</td>
+          </tr>
+          <tr>
+            <th className="amountCellHead" colSpan="3">
+              Sub Total
+            </th>
+            <td className="amountCell">Rs. {finalAmount}</td>
+          </tr>
+          <tr>
+            <th className="amountCellHead" colSpan="3">
+              Rounded Off
+            </th>
+            <td className="amountCell">Rs. -{roundOffAmount}</td>
+          </tr>
+          <tr>
+            <th className="amountCellHead" colSpan="3">
+              Grand Total
+            </th>
+            <th className="amountCell">
+              Rs. {getAmountWithZeroPaisa(finalAmount)}
+            </th>
+          </tr>
+        </tbody>
       </table>
     </div>
   );

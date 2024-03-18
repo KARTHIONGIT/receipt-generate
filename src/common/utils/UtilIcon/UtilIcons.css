@@ -3,19 +3,17 @@
   flex-direction: row;
   justify-content: space-between;
   .fullscreenIcon,
-  .fullscreenIcon,
-  .closeIcon {
+  .closeModalIcon {
     border: 1px solid silver;
     box-shadow: 2px 2px 0 0 rgb(1, 165, 146);
     border-radius: 8px;
     transition: all 0.3s;
   }
-  .closeIcon {
+  .closeModalIcon {
     padding: 3px;
   }
   .fullscreenIcon:hover,
-  .fullscreenIcon:hover,
-  .closeIcon:hover {
+  .closeModalIcon:hover {
     cursor: pointer;
     background-color: lightgray;
     box-shadow: 1px 1px 0 0 rgb(1, 165, 146);
